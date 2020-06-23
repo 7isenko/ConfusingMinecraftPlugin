@@ -5,7 +5,7 @@ import org.bukkit.inventory.ShapedRecipe;
 
 import java.util.Arrays;
 
-public class RecipeRotatory {
+public class RecipeRedactor {
     public static void rotateAll() {
         Bukkit.getServer().recipeIterator().forEachRemaining(recipe -> {
             if (recipe instanceof ShapedRecipe) {

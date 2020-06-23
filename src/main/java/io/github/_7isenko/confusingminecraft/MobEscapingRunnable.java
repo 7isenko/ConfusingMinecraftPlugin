@@ -21,7 +21,7 @@ public class MobEscapingRunnable implements Runnable {
             player.getNearbyEntities(8, 8, 8).forEach((entity -> {
                 if (types.contains(entity.getType()) && entity.isValid() && !entity.isDead() && player.getWorld().equals(entity.getWorld())) {
                     EntityCreature insentient = (EntityCreature) ((CraftEntity) entity).getHandle();
-                    insentient.goalSelector.a(1, new PathfinderGoalAvoidTarget<>(insentient, EntityPlayer.class, 8F, 2D, 4D));
+                    insentient.goalSelector.a(1, new PathfinderGoalAvoidTarget<>(insentient, EntityPlayer.class, 6F, 1.6D, 2.2D));
                 }
             }));
         }

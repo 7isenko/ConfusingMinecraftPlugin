@@ -17,6 +17,5 @@ public class BucketUseListener implements Listener {
         if (event.getBucket() == Material.LAVA_BUCKET) {
             ConfusingMinecraft.plugin.getServer().getScheduler().runTaskLater(ConfusingMinecraft.plugin, () -> block.setType(Material.WATER, true), 0);
         }
-
     }
 }
