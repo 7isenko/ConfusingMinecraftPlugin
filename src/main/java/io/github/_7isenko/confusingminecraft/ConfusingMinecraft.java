@@ -1,9 +1,5 @@
 package io.github._7isenko.confusingminecraft;
 
-import org.bukkit.Bukkit;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
-import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -31,23 +27,13 @@ public class ConfusingMinecraft extends JavaPlugin {
         // Bucket swap
         this.getServer().getPluginManager().registerEvents(new BucketUseListener(), this);
 
-        // Hello
-        this.getServer().getPluginManager().registerEvents(new Listener() {
-            @EventHandler
-            public void onChat(AsyncPlayerChatEvent event) {
-                if (event.getMessage().equalsIgnoreCase("удиви меня"))
-                    Bukkit.getServer().getScheduler().runTaskLater(ConfusingMinecraft.plugin, ()-> event.getPlayer().sendRawMessage("<Майнкрафт> Oк :)"), 20);
-            }
-        }, this);
-
         // Rotating recipes
         RecipeRedactor.rotateAll();
-
 
         // Add campfire recipes
         CampfireRecipeTranslator.addAll();
 
-        // Swap pick and axe
+        // Swap pick and axe recipes
         this.getServer().getPluginManager().registerEvents(new PickAxeRecipeSwapper(), this);
 
     }
