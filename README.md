@@ -1,5 +1,6 @@
-### ConfusingMinecraft
+## ConfusingMinecraft
 
+### English:
 * Creepers are invulnerable
 * No hoe
 * Shooting monsters can run away from you
@@ -9,6 +10,7 @@
 * Use campfire instead of a furnace
 * Swapped pickaxe and axe
 
+### Русский:
 * Криперы бессмертны
 * Отсутствует рецепт мотыги
 * Стреляющие мобы убегают
